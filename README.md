@@ -1,4 +1,4 @@
-# [n191 logo](assets/n191.svg) n191
+# ![n191 logo](assets/n191.svg) n191
 ## Fork of [microsoft/edit](https://github.com/microsoft/edit)
 
 A simple editor for simple needs.
