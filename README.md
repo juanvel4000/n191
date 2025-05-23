@@ -1,14 +1,14 @@
 # ![n191 logo](assets/n191.svg) n191
 ## Fork of [microsoft/edit](https://github.com/microsoft/edit)
 
-A simple editor for simple needs.
+A fork of the simple editor for simple needs.
 
-This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor), but with a modern interface and input controls similar to VS Code. The goal is to provide an accessible editor that even users largely unfamiliar with terminals can easily use.
+This is a fork of [microsoft/edit](https://github.com/microsoft/edit) which itself pays homage to [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor), but with a modern interface and input controls similar to  VS Code. The goal is to provide an accessible editor for users with minimal experience using terminals.
 
 ![Screenshot of Edit with the About dialog in the foreground](./assets/edit_hero_image.png)
 
 ## Installation
-later in the archive if you don't need them
+Coming soon...
 
 
 ## Build Instructions
