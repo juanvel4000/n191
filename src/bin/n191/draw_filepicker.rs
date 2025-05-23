@@ -5,11 +5,11 @@ use std::cmp::Ordering;
 use std::fs;
 use std::path::PathBuf;
 
-use edit::framebuffer::IndexedColor;
-use edit::helpers::*;
-use edit::input::vk;
-use edit::tui::*;
-use edit::{icu, path, sys};
+use n191::framebuffer::IndexedColor;
+use n191::helpers::*;
+use n191::input::vk;
+use n191::tui::*;
+use n191::{icu, path, sys};
 
 use crate::localization::*;
 use crate::state::*;

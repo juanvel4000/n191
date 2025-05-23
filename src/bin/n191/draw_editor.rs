@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-use edit::framebuffer::IndexedColor;
-use edit::helpers::*;
-use edit::icu;
-use edit::input::{kbmod, vk};
-use edit::tui::*;
+use n191::framebuffer::IndexedColor;
+use n191::helpers::*;
+use n191::icu;
+use n191::input::{kbmod, vk};
+use n191::tui::*;
 
 use crate::localization::*;
 use crate::state::*;

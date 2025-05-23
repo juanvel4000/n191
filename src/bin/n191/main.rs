@@ -21,14 +21,14 @@ use draw_editor::*;
 use draw_filepicker::*;
 use draw_menubar::*;
 use draw_statusbar::*;
-use edit::arena::{self, ArenaString, scratch_arena};
-use edit::framebuffer::{self, IndexedColor};
-use edit::helpers::{KIBI, MEBI, MetricFormatter, Rect, Size};
-use edit::input::{self, kbmod, vk};
-use edit::oklab::oklab_blend;
-use edit::tui::*;
-use edit::vt::{self, Token};
-use edit::{apperr, arena_format, base64, path, sys};
+use n191::arena::{self, ArenaString, scratch_arena};
+use n191::framebuffer::{self, IndexedColor};
+use n191::helpers::{KIBI, MEBI, MetricFormatter, Rect, Size};
+use n191::input::{self, kbmod, vk};
+use n191::oklab::oklab_blend;
+use n191::tui::*;
+use n191::vt::{self, Token};
+use n191::{apperr, arena_format, base64, path, sys};
 use localization::*;
 use state::*;
 
@@ -273,7 +273,7 @@ fn handle_args(state: &mut State) -> apperr::Result<bool> {
 
 fn print_help() {
     sys::write_stdout(concat!(
-        "Usage: edit [OPTIONS] [FILE[:LINE[:COLUMN]]]\r\n",
+        "Usage: n191 [OPTIONS] [FILE[:LINE[:COLUMN]]]\r\n",
         "Options:\r\n",
         "    -h, --help       Print this help message\r\n",
         "    -v, --version    Print the version number\r\n",
@@ -284,7 +284,7 @@ fn print_help() {
 }
 
 fn print_version() {
-    sys::write_stdout(concat!("edit version ", env!("CARGO_PKG_VERSION"), "\r\n"));
+    sys::write_stdout(concat!("n191 version ", env!("CARGO_PKG_VERSION"), "\r\n"));
 }
 
 fn draw(ctx: &mut Context, state: &mut State) {
@@ -378,7 +378,7 @@ fn write_terminal_title(output: &mut ArenaString, filename: &str) {
         output.push_str(" - ");
     }
 
-    output.push_str("edit\x1b\\");
+    output.push_str("n191\x1b\\");
 }
 
 const LARGE_CLIPBOARD_THRESHOLD: usize = 4 * KIBI;
