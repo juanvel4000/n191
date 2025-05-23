@@ -22,7 +22,7 @@ jobs:
       run: cargo build --config .cargo/release.toml --release
 
     - name: upload the output
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.6.2
       with:
         name: n191
         path: ./target/release/n191
