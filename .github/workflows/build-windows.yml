@@ -1,0 +1,45 @@
+name: build n191 for Windows
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install the nightly Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: nightly
+        override: true
+        profile: minimal
+
+    - name: Install rust-src component
+      run: rustup component add rust-src --toolchain nightly-x86_64-pc-windows-msvc
+      shell: pwsh
+
+    - name: Build with cargo
+      run: cargo build --config .cargo/release.toml --release
+      shell: pwsh
+
+    - name: Prepare dist folder and copy binary
+      run: |
+        New-Item -ItemType Directory -Force -Path dist
+        Copy-Item -Path target\release\n191.exe -Destination dist\n191.exe -Force
+      shell: pwsh
+
+    - name: Create zip archive
+      run: Compress-Archive -Path dist\* -DestinationPath dist\n191-win-${{ github.ref_name }}.zip -Force
+      shell: pwsh
+
+    - name: Upload release binary to GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: dist\n191-win-${{ github.ref_name }}.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
