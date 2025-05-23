@@ -167,16 +167,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "43da5946c66ffcc7745f48db692ffbb10a83bfe0afd96235c5c2a4fb23994929"
 
 [[package]]
-name = "edit"
-version = "1.0.0"
-dependencies = [
- "criterion",
- "libc",
- "windows-sys",
- "winres",
-]
-
-[[package]]
 name = "either"
 version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -251,6 +241,16 @@ name = "memchr"
 version = "2.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
+
+[[package]]
+name = "n191"
+version = "1.0.0"
+dependencies = [
+ "criterion",
+ "libc",
+ "windows-sys",
+ "winres",
+]
 
 [[package]]
 name = "num-traits"
