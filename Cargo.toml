@@ -1,10 +1,10 @@
 [package]
-name = "edit"
+name = "n191"
 version = "1.0.0"
 edition = "2024"
 rust-version = "1.87"
-repository = "https://github.com/microsoft/edit"
-homepage = "https://github.com/microsoft/edit"
+repository = "https://github.com/juanvel4000/n191"
+homepage = "https://github.com/juanvel4000/n191"
 license = "MIT"
 
 [[bench]]
