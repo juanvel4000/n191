@@ -17,6 +17,9 @@ jobs:
         toolchain: nightly
         override: true
         profile: minimal
+    - name: Install rust-src
+      run: rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
+
 
     - name: build with cargo
       run: cargo build --config .cargo/release.toml --release
