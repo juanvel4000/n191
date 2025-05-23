@@ -33,7 +33,12 @@ jobs:
           targets: ${{ matrix.target }}
 
       - name: Build binary
-        run: cargo build --release --target ${{ matrix.target }}
+        run: if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+            cargo build --config .cargo/release-windows-ms.toml --release --target ${{ matrix.target }}
+            else
+            cargo build --config .cargo/release.toml --release --target ${{ matrix.target }}
+            fi
+
 
       - name: Prepare artifact
         run: |
