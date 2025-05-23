@@ -30,11 +30,11 @@ jobs:
         mkdir -p dist
         cp target/release/n191 dist/n191
     - name: Create tar.gz archive
-      run: tar -czvf dist/n191-aarch64-macos-${{ github.ref }}.tar.gz dist/*
+      run: tar -czvf dist/n191-aarch64-macos-${{ github.ref_name }}.tar.gz dist/*
 
     - name: Upload release binary to GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        files: dist/n191-aarch64-macos-${{ github.ref }}.tar.gz
+        files: dist/n191-aarch64-macos-${{ github.ref_name }}.tar.gz
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
