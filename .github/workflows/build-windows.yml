@@ -24,7 +24,7 @@ jobs:
       shell: pwsh
 
     - name: Build with cargo
-      run: cargo build --config .cargo/release-windows-ms.toml --release
+      run: cargo build --config .cargo/release.toml --release
       shell: pwsh
 
     - name: Prepare dist folder and copy binary
