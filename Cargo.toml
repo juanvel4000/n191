@@ -1,5 +1,5 @@
 [package]
-name = "n191"
+name = "n191" # for n(c)o(mpatibility)w!1!1
 version = "1.0.0"
 edition = "2024"
 rust-version = "1.87"

@@ -6,10 +6,10 @@ use std::ffi::OsStr;
 use std::fs::File;
 use std::path::{Path, PathBuf};
 
-use edit::buffer::{RcTextBuffer, TextBuffer};
-use edit::helpers::{CoordType, Point};
-use edit::simd::memrchr2;
-use edit::{apperr, path, sys};
+use n191::buffer::{RcTextBuffer, TextBuffer};
+use n191::helpers::{CoordType, Point};
+use n191::simd::memrchr2;
+use n191::{apperr, path, sys};
 
 use crate::state::DisplayablePathBuf;
 

@@ -6,11 +6,11 @@ use std::ffi::{OsStr, OsString};
 use std::mem;
 use std::path::{Path, PathBuf};
 
-use edit::buffer::TextBuffer;
-use edit::framebuffer::IndexedColor;
-use edit::helpers::*;
-use edit::tui::*;
-use edit::{apperr, buffer, icu, sys};
+use n191::buffer::TextBuffer;
+use n191::framebuffer::IndexedColor;
+use n191::helpers::*;
+use n191::tui::*;
+use n191::{apperr, buffer, icu, sys};
 
 use crate::documents::DocumentManager;
 use crate::localization::*;

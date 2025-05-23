@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-use edit::arena::scratch_arena;
-use edit::helpers::AsciiStringHelpers;
-use edit::sys;
+use n191::arena::scratch_arena;
+use n191::helpers::AsciiStringHelpers;
+use n191::sys;
 
 #[derive(Clone, Copy, PartialEq, Eq)]
 pub enum LocId {

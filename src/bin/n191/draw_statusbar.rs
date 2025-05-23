@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-use edit::framebuffer::{Attributes, IndexedColor};
-use edit::helpers::*;
-use edit::input::vk;
-use edit::tui::*;
-use edit::{arena_format, icu};
+use n191::framebuffer::{Attributes, IndexedColor};
+use n191::helpers::*;
+use n191::input::vk;
+use n191::tui::*;
+use n191::{arena_format, icu};
 
 use crate::localization::*;
 use crate::state::*;

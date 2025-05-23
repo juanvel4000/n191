@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-use edit::arena_format;
-use edit::helpers::*;
-use edit::input::{kbmod, vk};
-use edit::tui::*;
+use n191::arena_format;
+use n191::helpers::*;
+use n191::input::{kbmod, vk};
+use n191::tui::*;
 
 use crate::localization::*;
 use crate::state::*;
@@ -126,7 +126,7 @@ pub fn draw_dialog_about(ctx: &mut Context, state: &mut State) {
         ctx.inherit_focus();
         ctx.attr_padding(Rect::three(1, 2, 1));
         {
-            ctx.label("description", "Microsoft Edit");
+            ctx.label("description", "n191");
             ctx.attr_overflow(Overflow::TruncateTail);
             ctx.attr_position(Position::Center);
 
@@ -142,7 +142,7 @@ pub fn draw_dialog_about(ctx: &mut Context, state: &mut State) {
             ctx.attr_overflow(Overflow::TruncateHead);
             ctx.attr_position(Position::Center);
 
-            ctx.label("copyright", "Copyright (c) Microsoft Corp 2025");
+            ctx.label("copyright", "Copyright (c) Microsoft Corp, 2025, Copyright (c) juanvel400, 2025 (n191)");
             ctx.attr_overflow(Overflow::TruncateTail);
             ctx.attr_position(Position::Center);
 
