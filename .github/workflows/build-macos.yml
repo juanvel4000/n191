@@ -1,0 +1,40 @@
+name: build n191 for macOS
+on:
+  push:
+    tags:
+        - 'v*'
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: install the nightly rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: nightly
+        override: true
+        profile: minimal
+    - name: Install rust-src
+      run: rustup component add rust-src --toolchain nightly-aarch64-apple-darwin
+
+
+    - name: build with cargo
+      run: cargo build --config .cargo/release.toml --release
+
+    - name: rename binary
+      run: |
+        mkdir -p dist
+        cp target/release/n191 dist/n191
+    - name: Create tar.gz archive
+      run: tar -czvf dist/n191-aarch64-macos-${{ github.ref }}.tar.gz dist/*
+
+    - name: Upload release binary to GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: dist/n191-aarch64-macos-${{ github.ref }}.tar.gz
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
