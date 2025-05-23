@@ -1,4 +1,4 @@
-name: build n191 for macOS
+name: build n191 for Linux
 on:
   push:
     tags:
