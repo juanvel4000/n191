@@ -1,7 +1,8 @@
 name: build n191 for macOS
 on:
   push:
-    branches: [main]
+    tags:
+        - 'v*'
 
 jobs:
   build:
@@ -24,8 +25,14 @@ jobs:
     - name: build with cargo
       run: cargo build --config .cargo/release.toml --release
 
-    - name: upload the output
-      uses: actions/upload-artifact@v4.6.2
+    - name: rename binary
+      run: |
+        mkdir -p dist
+        cp target/release/n191 dist/n191-macos
+
+    - name: Upload release binary to GitHub Release
+      uses: softprops/action-gh-release@v2
       with:
-        name: n191
-        path: ./target/release/n191
+        files: dist/n191-macos
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
