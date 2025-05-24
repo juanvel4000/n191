@@ -326,24 +326,6 @@ const S_LANG_LUT: [[&str; LangId::Count as usize]; LocId::Count as usize] = [
         /* zh_hans */ "退出",
         /* zh_hant */ "退出",
     ],
-<<<<<<< HEAD:src/bin/n191/localization.rs
-=======
-    // FileGoto
-    [
-        // NOTE: Translations with OpenAI o3 - found it to work quite well for this
-        /* en      */ "Go to Line/Column…",
-        /* de      */ "Gehe zu Zeile/Spalte…",
-        /* es      */ "Ir a línea/columna…",
-        /* fr      */ "Aller à la ligne/colonne…",
-        /* it      */ "Vai a riga/colonna…",
-        /* ja      */ "行/列へ移動…",
-        /* ko      */ "행/열로 이동…",
-        /* pt_br   */ "Ir para linha/coluna…",
-        /* ru      */ "Перейти к строке/столбцу…",
-        /* zh_hans */ "转到行/列…",
-        /* zh_hant */ "跳至行/列…",
-    ],
->>>>>>> c5f26b9 (Review changes + comments for #133):src/bin/edit/localization.rs
 
     // Edit (a menu bar item)
     [
