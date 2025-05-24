@@ -6,7 +6,7 @@ _we all n191._
 This is a fork of [microsoft/edit](https://github.com/microsoft/edit) which itself pays homage to [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor). n191 was made to fix some issues with edit and port it to **macOS (ARM-based Macs)** because edit doesn't
 
 
-![Screenshot of n191 with the About dialog in the foreground](./assets/edit_hero_image.png)
+![Screenshot of n191 with the About dialog in the foreground](./assets/macOS-n191.png)
 
 ## Installation
 ### Linux (Only x86_64 supported)
