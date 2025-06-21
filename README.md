@@ -33,13 +33,7 @@ New-Item -ItemType Directory -Force -Path $target
 ```
 **Note**: change `n191` for the directory you stored `n191.exe` in
 
-### [Arch Linux](https://aur.archlinux.org/packages/n191)
-n191 is in the AUR, just use your AUR helper to install it
 
-Example for yay:
-```bash
-yay -S n191
-```
 ### Brew
 This works on any Mac
 1. Add the tap
